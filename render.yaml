@@ -1,0 +1,19 @@
+# Render.com Blueprint — deploy 1 chạm cho web học tiếng Anh.
+# Vào https://dashboard.render.com → New → Blueprint → trỏ tới repo này.
+# Render tự cấp HTTPS (https://<tên>.onrender.com) và biến PORT; backend đọc process.env.PORT.
+services:
+  - type: web
+    name: learn-english
+    runtime: node
+    plan: free
+    # Build frontend (Vite → dist/) rồi backend phục vụ dist/ + /api trên cùng cổng.
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      # Mở ra ngoài trong container của Render.
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_VERSION
+        value: 20.18.0
+      # KHÔNG đặt API key ở đây: mỗi người dùng tự nhập key trong tab CẤU HÌNH (BYOK).

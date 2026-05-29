@@ -41,6 +41,44 @@ export function buildAnalyzePrompt(sourceLang, targetLang) {
   )
 }
 
+// Lời nhắc tạo mục từ vựng: với mỗi từ tiếng Anh, sinh nghĩa tiếng Việt ngắn gọn +
+// một câu ví dụ tiếng Anh RIÊNG cho từ đó + bản dịch ví dụ. KHÔNG dùng lại câu gốc trong bài.
+export function buildVocabPrompt() {
+  return (
+    `You are a bilingual English-Vietnamese lexicographer helping a Vietnamese learner. ` +
+    `The input is a JSON array of English words. For EACH word, write a concise dictionary-style entry:\n` +
+    `- "term": the word in lowercase (use the base/dictionary form if obvious).\n` +
+    `- "meaning": a SHORT Vietnamese definition (the common meaning) — a few words, NOT a whole sentence.\n` +
+    `- "example": ONE short, natural English sentence that uses the word correctly.\n` +
+    `- "exampleVi": the Vietnamese translation of that example sentence.\n` +
+    `Return ONLY a JSON object {"entries": [...]} whose "entries" array has EXACTLY one object per ` +
+    `input word, in the SAME order. No markdown, no comments, no extra text.`
+  )
+}
+
+// Tách danh sách mục từ vựng từ chuỗi model trả về (chịu được khi model bọc thêm chữ).
+export function parseVocab(content) {
+  let parsed
+  try {
+    parsed = JSON.parse(content)
+  } catch {
+    const m = content.match(/\{[\s\S]*\}|\[[\s\S]*\]/)
+    if (m) {
+      try { parsed = JSON.parse(m[0]) } catch { /* bỏ qua */ }
+    }
+  }
+  const list = Array.isArray(parsed) ? parsed : parsed?.entries
+  if (!Array.isArray(list)) {
+    throw new Error('Phản hồi từ vựng không đúng định dạng JSON mong đợi.')
+  }
+  return list.map((e) => ({
+    term: e && e.term != null ? String(e.term) : '',
+    meaning: e && e.meaning != null ? String(e.meaning) : '',
+    example: e && e.example != null ? String(e.example) : '',
+    exampleVi: e && e.exampleVi != null ? String(e.exampleVi) : '',
+  }))
+}
+
 const ERROR_TYPES = new Set(['structure', 'grammar', 'vocabulary', 'context'])
 
 // Tách kết quả phân tích từ chuỗi trả về của model (chịu được khi model bọc thêm chữ).

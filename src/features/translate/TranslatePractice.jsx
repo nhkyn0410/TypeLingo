@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import { getData, putData, getProviders, translateDocument, analyzeSentence } from '../../api/client'
+import { getData, putData, getProviders, translateDocument, analyzeSentence, defineVocabulary } from '../../api/client'
 import { speak, makeId } from '../../lib/util'
 import { countWords, gradeTranslation } from './grading'
-import { mergeVocabularyFromPairs, normalizeWord, wordMatches } from './vocabularyExtract'
+import { collectEnglishTerms, newTermsAmong, mergeVocabulary, normalizeWord, wordMatches } from './vocabularyExtract'
 
 // Hai chiều dịch: nguồn → đích.
 const DIRECTIONS = {
@@ -280,13 +280,39 @@ export default function TranslatePractice() {
     [exercise, direction],
   )
 
-  const expandVocabulary = useCallback((pairsForVocab, title) => {
-    const { next, added } = mergeVocabularyFromPairs(vocabulary, pairsForVocab, title)
+  // Rã CHỈ từ tiếng Anh trong bài; với từ mới, gọi AI sinh nghĩa + ví dụ RIÊNG (gộp 1 request).
+  const expandVocabulary = useCallback(async (pairsForVocab, title) => {
+    const terms = collectEnglishTerms(pairsForVocab)
+    if (!terms.length) return
+
+    const newTerms = newTermsAmong(vocabulary, terms)
+    const defsByTerm = {}
+
+    if (newTerms.length && aiProvider) {
+      // Ưu tiên từ xuất hiện nhiều; gộp mọi từ mới trong MỘT lần gọi (giới hạn để tránh lô quá lớn).
+      const words = [...newTerms]
+        .sort((a, b) => (b.frequency || 0) - (a.frequency || 0))
+        .slice(0, 60)
+        .map((t) => t.term)
+      try {
+        const res = await defineVocabulary({ words, provider: aiProvider })
+        const entries = Array.isArray(res?.entries) ? res.entries : []
+        // Map theo THỨ TỰ gửi đi (AI có thể đổi "term" sang dạng gốc) để gán đúng từ đã rã.
+        words.forEach((w, i) => {
+          const e = entries[i]
+          if (e) defsByTerm[normalizeWord(w)] = e
+        })
+      } catch {
+        // Lỗi AI/mạng — vẫn thêm từ với nghĩa/ví dụ để trống cho người dùng tự điền sau.
+      }
+    }
+
+    const { next, added } = mergeVocabulary(vocabulary, terms, defsByTerm, title)
     if (added > 0) {
       setVocabulary(next)
       putData('vocabulary', next).catch(() => {})
     }
-  }, [vocabulary])
+  }, [vocabulary, aiProvider])
 
   const handleInput = useCallback((e) => {
     const v = e.target.value
@@ -431,7 +457,7 @@ export default function TranslatePractice() {
     setExercises(next)
     setShowCreate(false)
     setNewTitle(''); setNewEn(''); setNewVi(''); setCreateError(''); setCreateNotice('')
-    expandVocabulary(newPairs, created.title)
+    expandVocabulary(newPairs, created.title).catch(() => {})
     changeExercise(created.id)
     putData('exercises', next).catch((err) => setCreateError(err.message || 'Lưu bài thất bại.'))
   }, [newEn, newVi, newTitle, exercises, changeExercise, expandVocabulary])
@@ -440,7 +466,7 @@ export default function TranslatePractice() {
   const handleAiCreate = useCallback(async () => {
     if (!newTitle.trim()) { setCreateError('Cần nhập tiêu đề bài.'); return }
     if (!aiSource.trim()) { setCreateError('Cần dán nội dung tài liệu để dịch.'); return }
-    if (!aiProvider) { setCreateError('Chưa có nhà cung cấp AI nào được cấu hình trong .env.'); return }
+    if (!aiProvider) { setCreateError('Chưa có nhà cung cấp AI nào được cấu hình. Vào tab CẤU HÌNH để nhập API key.'); return }
     setCreateError(''); setAiBusy(true)
     try {
       const res = await translateDocument({ content: aiSource, type: aiType, direction: aiDirection, provider: aiProvider })
@@ -449,11 +475,12 @@ export default function TranslatePractice() {
       const created = { id: makeId(newTitle.trim()), title: newTitle.trim(), pairs: aiPairs }
       const next = [...exercises, created]
       setExercises(next)
+      putData('exercises', next).catch((err) => setCreateError(err.message || 'Lưu bài thất bại.'))
+      setCreateNotice('Đang tạo nghĩa và ví dụ cho từ vựng mới…')
+      await expandVocabulary(aiPairs, created.title)
       setShowCreate(false)
       setNewTitle(''); setAiSource(''); setCreateNotice('')
-      expandVocabulary(aiPairs, created.title)
       changeExercise(created.id)
-      putData('exercises', next).catch((err) => setCreateError(err.message || 'Lưu bài thất bại.'))
     } catch (err) {
       setCreateError(err.message || 'Dịch thất bại.')
     } finally {
@@ -523,7 +550,7 @@ export default function TranslatePractice() {
             <button
               onClick={() => setAiOn((v) => !v)}
               disabled={!aiAvailable}
-              title={aiAvailable ? 'Bật/tắt phân tích bằng AI' : 'Chưa cấu hình nhà cung cấp AI trong .env'}
+              title={aiAvailable ? 'Bật/tắt phân tích bằng AI' : 'Chưa cấu hình AI — vào tab CẤU HÌNH để nhập API key'}
               className={`border px-3 py-2 text-xs tracking-wider transition-colors disabled:opacity-40 ${
                 aiEnabled ? 'border-accent/60 bg-accent/15 text-accent glow-accent' : 'border-edge text-dim hover:text-ink'
               }`}

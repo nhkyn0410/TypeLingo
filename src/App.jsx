@@ -2,6 +2,7 @@ import { useState } from 'react'
 import TranslatePractice from './features/translate/TranslatePractice'
 import Flashcards from './features/flashcards/Flashcards'
 import Quiz from './features/quiz/Quiz'
+import VocabularyTyping from './features/typing/VocabularyTyping'
 import Vocabulary from './features/vocabulary/Vocabulary'
 import DataManager from './components/DataManager'
 import Settings from './features/settings/Settings'
@@ -10,6 +11,7 @@ const TABS = [
   { id: 'translate', label: 'DỊCH', Comp: TranslatePractice },
   { id: 'flashcards', label: 'FLASHCARD', Comp: Flashcards },
   { id: 'quiz', label: 'QUIZ', Comp: Quiz },
+  { id: 'typing', label: 'GÕ TỪ', Comp: VocabularyTyping },
   { id: 'vocabulary', label: 'TỪ VỰNG', Comp: Vocabulary },
   { id: 'settings', label: 'CẤU HÌNH', Comp: Settings },
 ]

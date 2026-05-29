@@ -1,6 +1,6 @@
 // Adapter cho Google Gemini — endpoint POST {baseURL}/v1beta/models/{model}:generateContent.
 // Dùng header x-goog-api-key để KHÔNG đặt API key trên URL.
-import { buildSystemPrompt, parseTranslations, buildAnalyzePrompt, parseAnalysis } from './_shared.js'
+import { buildSystemPrompt, parseTranslations, buildAnalyzePrompt, parseAnalysis, buildVocabPrompt, parseVocab } from './_shared.js'
 
 export async function translate({ texts, sourceLang, targetLang, model, apiKey, baseURL, signal }) {
   if (!apiKey) throw new Error('Thiếu API key cho nhà cung cấp này.')
@@ -60,4 +60,35 @@ export async function analyze({ source, reference, user, sourceLang, targetLang,
   const data = await res.json()
   const content = (data?.candidates?.[0]?.content?.parts || []).map((p) => p?.text || '').join('')
   return parseAnalysis(content)
+}
+
+// Sinh nghĩa + ví dụ riêng cho danh sách từ tiếng Anh → [{ term, meaning, example, exampleVi }].
+export async function defineVocabulary({ words, model, apiKey, baseURL, signal }) {
+  if (!apiKey) throw new Error('Thiếu API key cho nhà cung cấp này.')
+  if (!Array.isArray(words) || words.length === 0) return []
+
+  const base = baseURL.replace(/\/+$/, '')
+  const url = `${base}/v1beta/models/${encodeURIComponent(model)}:generateContent`
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-goog-api-key': apiKey,
+    },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: buildVocabPrompt() }] },
+      contents: [{ role: 'user', parts: [{ text: JSON.stringify(words) }] }],
+      generationConfig: { temperature: 0, responseMimeType: 'application/json' },
+    }),
+    signal,
+  })
+
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '')
+    throw new Error(`Lỗi gọi API (${res.status}): ${detail.slice(0, 300)}`)
+  }
+
+  const data = await res.json()
+  const content = (data?.candidates?.[0]?.content?.parts || []).map((p) => p?.text || '').join('')
+  return parseVocab(content)
 }

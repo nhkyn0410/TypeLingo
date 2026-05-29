@@ -106,5 +106,1149 @@
     "exampleVi": "Chúng tôi biết ơn vì mọi điều bạn đã làm.",
     "topic": "Cảm xúc",
     "learned": false
+  },
+  {
+    "id": "vi-c",
+    "term": "việc",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 2,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      },
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "h-c",
+    "term": "học",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 3,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      },
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      },
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "kh-ng",
+    "term": "không",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "ch-",
+    "term": "chỉ",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "qu-",
+    "term": "quá",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "tr-nh",
+    "term": "trình",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "ghi",
+    "term": "ghi",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "nh-",
+    "term": "nhớ",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "ki-n",
+    "term": "kiến",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 2,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      },
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "th-c",
+    "term": "thức",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 2,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      },
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "c-n",
+    "term": "còn",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "c-ch",
+    "term": "cách",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "r-n",
+    "term": "rèn",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "luy-n",
+    "term": "luyện",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "duy",
+    "term": "duy",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 2,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      },
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "kh-",
+    "term": "khả",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "n-ng",
+    "term": "năng",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "gi-i",
+    "term": "giải",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "quy-t",
+    "term": "quyết",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "v-n",
+    "term": "vấn",
+    "meaning": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "example": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+    "exampleVi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Việc học không chỉ là quá trình ghi nhớ kiến thức, mà còn là cách rèn luyện tư duy và khả năng giải quyết vấn đề.",
+        "vi": "Learning is not just a process of memorizing knowledge, but also a way to train thinking and problem-solving skills."
+      }
+    ]
+  },
+  {
+    "id": "m-t",
+    "term": "một",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "ng-i",
+    "term": "người",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "hi-u",
+    "term": "hiệu",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "qu-",
+    "term": "quả",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "th-ng",
+    "term": "thường",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "bi-t",
+    "term": "biết",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "-t",
+    "term": "đặt",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "m-c",
+    "term": "mục",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "ti-u",
+    "term": "tiêu",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "r-ng",
+    "term": "ràng",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "chia",
+    "term": "chia",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "nh-",
+    "term": "nhỏ",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "c-ng",
+    "term": "công",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "ki-m",
+    "term": "kiểm",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "tra",
+    "term": "tra",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "l-i",
+    "term": "lại",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "k-t",
+    "term": "kết",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "sau",
+    "term": "sau",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "m-i",
+    "term": "mỗi",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "giai",
+    "term": "giai",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "-o-n",
+    "term": "đoạn",
+    "meaning": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "example": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+    "exampleVi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Một người học hiệu quả thường biết đặt mục tiêu rõ ràng, chia nhỏ công việc và kiểm tra lại kết quả sau mỗi giai đoạn.",
+        "vi": "An effective learner often knows how to set clear goals, break down tasks, and review results after each stage."
+      }
+    ]
+  },
+  {
+    "id": "khi",
+    "term": "khi",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "tr-",
+    "term": "trì",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "-c",
+    "term": "được",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "th-i",
+    "term": "thói",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "quen",
+    "term": "quen",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "-u",
+    "term": "đều",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "-n",
+    "term": "đặn",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "tr-",
+    "term": "trở",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "n-n",
+    "term": "nên",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "v-ng",
+    "term": "vững",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "ch-c",
+    "term": "chắc",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "h-n",
+    "term": "hơn",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "theo",
+    "term": "theo",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "th-i",
+    "term": "thời",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
+  },
+  {
+    "id": "gian",
+    "term": "gian",
+    "meaning": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "example": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+    "exampleVi": "When maintaining a regular study habit, knowledge becomes more solid over time.",
+    "topic": "Chủ đề học tập",
+    "learned": false,
+    "auto": true,
+    "frequency": 1,
+    "sourceTitles": [
+      "Chủ đề học tập"
+    ],
+    "examples": [
+      {
+        "en": "Khi duy trì được thói quen học đều đặn, kiến thức sẽ trở nên vững chắc hơn theo thời gian.",
+        "vi": "When maintaining a regular study habit, knowledge becomes more solid over time."
+      }
+    ]
   }
 ]

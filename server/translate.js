@@ -68,7 +68,7 @@ export function parseDocument(content, type) {
 }
 
 // Luồng chính: parse → dịch theo lô → ghép cặp { en, vi }.
-export async function translateDocument({ content, type, direction = 'en-vi', provider, model, signal }) {
+export async function translateDocument({ content, type, direction = 'en-vi', provider, model, apiKey, signal }) {
   const [sourceLang, targetLang] = String(direction).split('-')
   if (!sourceLang || !targetLang) throw new Error('Chiều dịch không hợp lệ.')
 
@@ -85,7 +85,7 @@ export async function translateDocument({ content, type, direction = 'en-vi', pr
   const translations = []
   for (let i = 0; i < segments.length; i += BATCH_SIZE) {
     const batch = segments.slice(i, i + BATCH_SIZE)
-    const out = await translateBatch({ texts: batch, sourceLang, targetLang, provider, model, signal })
+    const out = await translateBatch({ texts: batch, sourceLang, targetLang, provider, model, apiKey, signal })
     // Đảm bảo độ dài khớp để không vỡ cặp; thiếu thì đệm chuỗi rỗng.
     for (let j = 0; j < batch.length; j++) translations.push(out[j] ?? '')
   }

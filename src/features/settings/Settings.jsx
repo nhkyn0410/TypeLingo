@@ -15,19 +15,10 @@ export default function Settings() {
         setConfig(data)
         setDefaultProvider(data.defaultProvider || '')
         const next = {}
-        for (const p of data.providers || []) {
-          next[p.name] = { apiKey: '', baseURL: p.baseURL || '', model: p.model || '' }
-        }
+        for (const p of data.providers || []) next[p.name] = { apiKey: '', model: p.model || '' }
         setDrafts(next)
       })
-      .catch((err) => {
-        const msg = err.message || ''
-        if (msg.includes('/config') && msg.includes('404')) {
-          setError('Backend đang chạy chưa có API cấu hình. Hãy dừng server hiện tại rồi chạy lại `npm start` để nạp phiên bản mới.')
-        } else {
-          setError(msg || 'Không tải được cấu hình.')
-        }
-      })
+      .catch((err) => setError(err.message || 'Không tải được cấu hình.'))
   }, [])
 
   const providers = config?.providers || []
@@ -45,26 +36,17 @@ export default function Settings() {
       const providersPayload = {}
       for (const p of providers) {
         const d = drafts[p.name] || {}
-        providersPayload[p.name] = {
-          apiKey: d.apiKey || '',
-          baseURL: d.baseURL ?? '',
-          model: d.model ?? '',
-        }
+        providersPayload[p.name] = { apiKey: d.apiKey || '', model: d.model ?? '' }
       }
       const next = await putConfig({ defaultProvider, providers: providersPayload })
       setConfig(next)
       setDefaultProvider(next.defaultProvider || defaultProvider)
       const fresh = {}
-      for (const p of next.providers || []) fresh[p.name] = { apiKey: '', baseURL: p.baseURL || '', model: p.model || '' }
+      for (const p of next.providers || []) fresh[p.name] = { apiKey: '', model: p.model || '' }
       setDrafts(fresh)
-      setStatus('Đã lưu cấu hình vào .env local. API key mới đã được áp dụng cho backend đang chạy.')
+      setStatus('Đã lưu vào trình duyệt này. API key chỉ nằm trên máy bạn, chỉ rời máy khi gọi AI.')
     } catch (err) {
-      const msg = err.message || ''
-      if (msg.includes('/config') && msg.includes('404')) {
-        setError('Backend đang chạy chưa có API cấu hình. Hãy dừng server hiện tại rồi chạy lại `npm start` để nạp phiên bản mới.')
-      } else {
-        setError(msg || 'Lưu cấu hình thất bại.')
-      }
+      setError(err.message || 'Lưu cấu hình thất bại.')
     } finally {
       setSaving(false)
     }
@@ -78,12 +60,12 @@ export default function Settings() {
             <h1 className="glow-accent text-2xl font-bold tracking-[0.18em] sm:text-3xl">CẤU HÌNH AI</h1>
             <p className="hud-label mt-2 flex items-center gap-2 text-dim">
               <span className="status-dot inline-block h-2 w-2 rounded-full bg-neon shadow-[0_0_8px_var(--color-neon)]" />
-              API KEY LƯU LOCAL TRONG BACKEND
+              API KEY LƯU TRONG TRÌNH DUYỆT CỦA BẠN
             </p>
           </div>
           <div className="panel hud-corners px-5 py-3">
             <span className="hud-label text-dim">MẶC ĐỊNH </span>
-            <span className="glow-neon text-lg font-bold">{selected?.name || '--'}</span>
+            <span className="glow-neon text-lg font-bold">{selected?.label || selected?.name || '--'}</span>
           </div>
         </header>
 
@@ -99,12 +81,16 @@ export default function Settings() {
               className="min-w-[12rem] bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-neon"
             >
               {providers.map((p) => (
-                <option key={p.name} value={p.name}>{p.name}</option>
+                <option key={p.name} value={p.name}>{p.label || p.name}</option>
               ))}
             </select>
           </div>
           <p className="text-sm leading-relaxed text-dim">
-            API key không được hiển thị lại sau khi lưu. Để giữ key cũ, hãy để ô API key trống và chỉ chỉnh model/base URL nếu cần.
+            Mỗi người tự dùng API key của riêng mình. Key được lưu cục bộ trong trình duyệt này (localStorage), không gửi
+            cho ai khác và chỉ rời máy bạn khi gọi dịch/phân tích. Xóa lịch sử trình duyệt sẽ xóa luôn key đã lưu.
+          </p>
+          <p className="text-sm leading-relaxed text-dim">
+            API key không hiển thị lại sau khi lưu. Để giữ key cũ, hãy để trống ô API key và chỉ chỉnh model nếu cần.
           </p>
         </section>
 
@@ -115,7 +101,7 @@ export default function Settings() {
               <div key={p.name} className={`panel hud-corners space-y-4 px-5 py-5 ${p.name === defaultProvider ? 'panel-accent' : ''}`}>
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
-                    <p className="glow-neon text-lg font-bold uppercase tracking-wider">{p.name}</p>
+                    <p className="glow-neon text-lg font-bold uppercase tracking-wider">{p.label || p.name}</p>
                     <p className="hud-label mt-1 text-dim">{p.configured ? 'ĐÃ CÓ API KEY' : 'CHƯA CÓ API KEY'}</p>
                   </div>
                   {p.name === defaultProvider && <span className="hud-label text-accent">MẶC ĐỊNH</span>}
@@ -127,7 +113,7 @@ export default function Settings() {
                     type="password"
                     value={draft.apiKey || ''}
                     onChange={(e) => updateDraft(p.name, 'apiKey', e.target.value)}
-                    placeholder={p.configured ? 'Để trống để giữ key hiện tại' : `Nhập ${p.keyEnv}`}
+                    placeholder={p.configured ? 'Để trống để giữ key hiện tại' : 'Dán API key của bạn'}
                     className="w-full bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-accent"
                   />
                 </label>
@@ -138,16 +124,6 @@ export default function Settings() {
                     value={draft.model || ''}
                     onChange={(e) => updateDraft(p.name, 'model', e.target.value)}
                     placeholder={p.defaultModel}
-                    className="w-full bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-neon"
-                  />
-                </label>
-
-                <label className="block space-y-1">
-                  <span className="hud-label text-dim">BASE URL</span>
-                  <input
-                    value={draft.baseURL || ''}
-                    onChange={(e) => updateDraft(p.name, 'baseURL', e.target.value)}
-                    placeholder={p.defaultBaseURL}
                     className="w-full bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-neon"
                   />
                 </label>

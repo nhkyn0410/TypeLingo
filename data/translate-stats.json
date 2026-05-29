@@ -168,5 +168,15 @@
     "ms": 58393.800000000745,
     "words": 29,
     "at": "2026-05-29T00:39:48.237Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "vi-en",
+    "similarity": 100,
+    "wpm": 14,
+    "ms": 75338.40000000002,
+    "words": 18,
+    "at": "2026-05-29T10:07:51.251Z"
   }
 ]
