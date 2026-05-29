@@ -20,7 +20,14 @@ export default function Settings() {
         }
         setDrafts(next)
       })
-      .catch((err) => setError(err.message || 'Không tải được cấu hình.'))
+      .catch((err) => {
+        const msg = err.message || ''
+        if (msg.includes('/config') && msg.includes('404')) {
+          setError('Backend đang chạy chưa có API cấu hình. Hãy dừng server hiện tại rồi chạy lại `npm start` để nạp phiên bản mới.')
+        } else {
+          setError(msg || 'Không tải được cấu hình.')
+        }
+      })
   }, [])
 
   const providers = config?.providers || []
@@ -52,7 +59,12 @@ export default function Settings() {
       setDrafts(fresh)
       setStatus('Đã lưu cấu hình vào .env local. API key mới đã được áp dụng cho backend đang chạy.')
     } catch (err) {
-      setError(err.message || 'Lưu cấu hình thất bại.')
+      const msg = err.message || ''
+      if (msg.includes('/config') && msg.includes('404')) {
+        setError('Backend đang chạy chưa có API cấu hình. Hãy dừng server hiện tại rồi chạy lại `npm start` để nạp phiên bản mới.')
+      } else {
+        setError(msg || 'Lưu cấu hình thất bại.')
+      }
     } finally {
       setSaving(false)
     }

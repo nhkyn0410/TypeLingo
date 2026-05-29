@@ -8,8 +8,15 @@ async function request(path, options = {}) {
     ...options,
   })
   if (!res.ok) {
-    const msg = await res.text().catch(() => '')
-    throw new Error(`API ${path} lỗi ${res.status}: ${msg}`)
+    const text = await res.text().catch(() => '')
+    let msg = text
+    try {
+      const parsed = JSON.parse(text)
+      msg = parsed?.error || parsed?.message || text
+    } catch {
+      msg = text.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
+    }
+    throw new Error(`API ${path} lỗi ${res.status}${msg ? `: ${msg}` : ''}`)
   }
   return res.json()
 }
