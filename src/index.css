@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #07070f;
+  --color-surface: #0b0d1c;
+  --color-surface-2: #0a0c18;
+  --color-edge: #143247;
+  --color-neon: #2de2ff;
+  --color-accent: #ff2d9b;
+  --color-ink: #c7ecff;
+  --color-dim: #5c7a93;
+  --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", "Consolas", "Courier New", monospace;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: var(--color-void);
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    /* Nền lưới mờ kiểu HUD */
+    background-image:
+      linear-gradient(rgba(45, 226, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(45, 226, 255, 0.04) 1px, transparent 1px),
+      radial-gradient(circle at 18% 0%, rgba(255, 45, 155, 0.08), transparent 45%),
+      radial-gradient(circle at 100% 100%, rgba(45, 226, 255, 0.06), transparent 40%);
+    background-size: 38px 38px, 38px 38px, 100% 100%, 100% 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  /* Khung panel HUD viền neon + ánh sáng */
+  .panel {
+    position: relative;
+    min-width: 0;
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-neon) 26%, transparent);
+    box-shadow:
+      0 0 14px rgba(45, 226, 255, 0.06),
+      inset 0 0 32px rgba(45, 226, 255, 0.025);
+  }
+
+  .panel-accent {
+    border-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+    box-shadow:
+      0 0 16px rgba(255, 45, 155, 0.12),
+      inset 0 0 32px rgba(255, 45, 155, 0.03);
+  }
+
+  /* Chữ phát sáng */
+  .glow-accent {
+    color: var(--color-accent);
+    text-shadow: 0 0 8px rgba(255, 45, 155, 0.65), 0 0 18px rgba(255, 45, 155, 0.35);
+  }
+
+  .glow-neon {
+    color: var(--color-neon);
+    text-shadow: 0 0 8px rgba(45, 226, 255, 0.55), 0 0 16px rgba(45, 226, 255, 0.3);
+  }
+
+  /* Nhãn nhỏ kiểu HUD */
+  .hud-label {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+  }
+
+  /* 4 góc bracket trang trí cho khung nhập/hiển thị */
+  .hud-corners {
+    --c: color-mix(in srgb, var(--color-neon) 70%, transparent);
+    --s: 11px;
+    --t: 1px;
+    background-image:
+      linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+      linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+      linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c)),
+      linear-gradient(var(--c), var(--c)), linear-gradient(var(--c), var(--c));
+    background-repeat: no-repeat;
+    background-size:
+      var(--s) var(--t), var(--t) var(--s),
+      var(--s) var(--t), var(--t) var(--s),
+      var(--s) var(--t), var(--t) var(--s),
+      var(--s) var(--t), var(--t) var(--s);
+    background-position:
+      top left, top left,
+      top right, top right,
+      bottom left, bottom left,
+      bottom right, bottom right;
+  }
+
+  /* Con trỏ nhấp nháy trạng thái */
+  .status-dot {
+    animation: hud-pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes hud-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+/* Thanh cuộn mảnh hợp tông */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(45, 226, 255, 0.35) transparent;
+}

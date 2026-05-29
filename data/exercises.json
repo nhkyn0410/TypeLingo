@@ -1,0 +1,38 @@
+[
+  {
+    "id": "arch-minimal",
+    "title": "Triết lý thiết kế tối giản",
+    "pairs": [
+      {
+        "en": "The architectural philosophy of minimal design relies heavily on the spatial relationship between structural elements and empty voids.",
+        "vi": "Triết lý kiến trúc của thiết kế tối giản phụ thuộc rất nhiều vào mối quan hệ không gian giữa các yếu tố cấu trúc và những khoảng trống."
+      },
+      {
+        "en": "Every line and surface must serve a clear purpose, with nothing added for mere decoration.",
+        "vi": "Mỗi đường nét và bề mặt đều phải phục vụ một mục đích rõ ràng, không thêm bất cứ thứ gì chỉ để trang trí."
+      },
+      {
+        "en": "In this approach, silence and emptiness become as important as the objects themselves.",
+        "vi": "Theo cách tiếp cận này, sự tĩnh lặng và khoảng trống trở nên quan trọng ngang với chính các vật thể."
+      }
+    ]
+  },
+  {
+    "id": "morning-routine",
+    "title": "Thói quen buổi sáng",
+    "pairs": [
+      {
+        "en": "She usually wakes up before sunrise to enjoy a few quiet moments alone.",
+        "vi": "Cô ấy thường thức dậy trước bình minh để tận hưởng vài khoảnh khắc yên tĩnh một mình."
+      },
+      {
+        "en": "After a short walk, he prepares a simple breakfast and reads the news.",
+        "vi": "Sau khi đi dạo một lát, anh ấy chuẩn bị một bữa sáng đơn giản và đọc tin tức."
+      },
+      {
+        "en": "They believe that a calm morning leads to a more productive day.",
+        "vi": "Họ tin rằng một buổi sáng bình yên sẽ dẫn đến một ngày làm việc hiệu quả hơn."
+      }
+    ]
+  }
+]

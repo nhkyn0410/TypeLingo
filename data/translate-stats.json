@@ -1,0 +1,172 @@
+[
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 100,
+    "wpm": 1007,
+    "ms": 1727.699999999255,
+    "words": 29,
+    "at": "2026-05-28T23:29:52.518Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 71,
+    "wpm": 147,
+    "ms": 6961.800000000745,
+    "words": 17,
+    "at": "2026-05-28T23:32:25.795Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 1,
+    "direction": "en-vi",
+    "similarity": 89,
+    "wpm": 350,
+    "ms": 3428.2999999998137,
+    "words": 20,
+    "at": "2026-05-28T23:33:35.630Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 35,
+    "wpm": 64,
+    "ms": 5645.5999999996275,
+    "words": 6,
+    "at": "2026-05-28T23:35:47.430Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 1,
+    "direction": "en-vi",
+    "similarity": 72,
+    "wpm": 191,
+    "ms": 4408.899999999441,
+    "words": 14,
+    "at": "2026-05-28T23:36:48.170Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 2,
+    "direction": "en-vi",
+    "similarity": 78,
+    "wpm": 377,
+    "ms": 3180.7999999998137,
+    "words": 20,
+    "at": "2026-05-28T23:36:57.828Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 96,
+    "wpm": 92205,
+    "ms": 17.569565217537075,
+    "words": 27,
+    "at": "2026-05-28T23:56:53.375Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 1,
+    "direction": "en-vi",
+    "similarity": 94,
+    "wpm": 92205,
+    "ms": 14.315942029104285,
+    "words": 22,
+    "at": "2026-05-28T23:56:53.375Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 2,
+    "direction": "en-vi",
+    "similarity": 83,
+    "wpm": 92205,
+    "ms": 13.014492753731167,
+    "words": 20,
+    "at": "2026-05-28T23:56:53.376Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 96,
+    "wpm": 102730,
+    "ms": 15.769565216953987,
+    "words": 27,
+    "at": "2026-05-28T23:57:51.578Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 1,
+    "direction": "en-vi",
+    "similarity": 94,
+    "wpm": 102730,
+    "ms": 12.849275361962508,
+    "words": 22,
+    "at": "2026-05-28T23:57:51.579Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 2,
+    "direction": "en-vi",
+    "similarity": 83,
+    "wpm": 102730,
+    "ms": 11.681159419965917,
+    "words": 20,
+    "at": "2026-05-28T23:57:51.579Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 96,
+    "wpm": 110695,
+    "ms": 14.634782608841425,
+    "words": 27,
+    "at": "2026-05-28T23:58:21.171Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 1,
+    "direction": "en-vi",
+    "similarity": 94,
+    "wpm": 110695,
+    "ms": 11.924637681278197,
+    "words": 22,
+    "at": "2026-05-28T23:58:21.172Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 2,
+    "direction": "en-vi",
+    "similarity": 83,
+    "wpm": 110695,
+    "ms": 10.840579710252907,
+    "words": 20,
+    "at": "2026-05-28T23:58:21.172Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "vi-en",
+    "similarity": 100,
+    "wpm": 7,
+    "ms": 165704.5,
+    "words": 18,
+    "at": "2026-05-29T00:32:43.666Z"
+  },
+  {
+    "exerciseId": "arch-minimal",
+    "pairIndex": 0,
+    "direction": "en-vi",
+    "similarity": 96,
+    "wpm": 30,
+    "ms": 58393.800000000745,
+    "words": 29,
+    "at": "2026-05-29T00:39:48.237Z"
+  }
+]
