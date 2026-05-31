@@ -998,10 +998,13 @@ function AnalysisCard({ item: c, onToggleRef }) {
       </div>
 
       <p className="whitespace-pre-wrap break-words leading-relaxed text-ink">
-        {c.ai?.errors?.length ? renderUserText(c.userText, c.ai.errors) : renderLocalUserText(c.userText, c.local)}
+        {c.aiStatus === 'done'
+          ? (c.ai?.errors?.length ? renderUserText(c.userText, c.ai.errors) : c.userText)
+          : renderLocalUserText(c.userText, c.local)}
       </p>
 
-      {c.local?.similarity < 100 && (
+      {/* Khi AI đã chấm (trọng tài chính), không tô đỏ "chưa khớp" cục bộ nữa để tránh mâu thuẫn. */}
+      {c.aiStatus !== 'done' && c.local?.similarity < 100 && (
         <div className="border-t border-edge/60 pt-2 text-sm leading-relaxed">
           <p className="hud-label mb-1 text-amber-200/80">CHƯA KHỚP 100%</p>
           <p className="text-neon/80">{renderReferenceDiff(c.local, c.reference)}</p>

@@ -22,7 +22,13 @@ export function buildAnalyzePrompt(sourceLang, targetLang) {
     `You are a strict but helpful language tutor. A student translated one sentence from ` +
     `${langName(sourceLang)} to ${langName(targetLang)}. You are given the source sentence, a reference ` +
     `translation (only ONE acceptable version among many), and the student's translation.\n` +
-    `Find the real mistakes in the STUDENT'S translation compared to the source meaning. Do not punish ` +
+    `LANGUAGE CHECK FIRST: the student's translation MUST be written in ${langName(targetLang)}. ` +
+    `If it is empty, or written in ${langName(sourceLang)} or any language other than ${langName(targetLang)} ` +
+    `(e.g. the student merely copied or paraphrased the source instead of translating it into ${langName(targetLang)}), ` +
+    `then set "score" to 0, return EXACTLY ONE error with "type":"context", "text" = a short verbatim substring of ` +
+    `the student's answer, "suggestion":"", and a "note" (in Vietnamese) saying the answer must be written in ` +
+    `${langName(targetLang)}. Do NOT reward a same-language paraphrase of the source.\n` +
+    `Otherwise, find the real mistakes in the STUDENT'S translation compared to the source meaning. Do not punish ` +
     `valid paraphrases or synonyms that differ from the reference but are still correct.\n` +
     `Classify each mistake into exactly one "type":\n` +
     `- "structure": wrong word order / sentence structure.\n` +
