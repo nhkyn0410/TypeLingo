@@ -154,10 +154,7 @@ export default function TranslatePractice() {
 
   // Tạo bài.
   const [showCreate, setShowCreate] = useState(false)
-  const [createMode, setCreateMode] = useState('manual') // 'manual' | 'ai'
   const [newTitle, setNewTitle] = useState('')
-  const [newEn, setNewEn] = useState('')
-  const [newVi, setNewVi] = useState('')
   const [createError, setCreateError] = useState('')
   const [createNotice, setCreateNotice] = useState('')
   const [aiDirection, setAiDirection] = useState('en-vi')
@@ -422,10 +419,7 @@ export default function TranslatePractice() {
         try {
           const parsed = JSON.parse(content)
           if (Array.isArray(parsed) && parsed.every((p) => typeof p?.en === 'string' && typeof p?.vi === 'string')) {
-            setCreateMode('manual')
-            setNewEn(parsed.map((p) => p.en).join('\n'))
-            setNewVi(parsed.map((p) => p.vi).join('\n'))
-            setCreateNotice(`Đã nạp ${parsed.length} cặp câu từ ${file.name}.`)
+            setCreateError('Tạo bài bằng song ngữ đã được bỏ khỏi màn này. Hãy dùng tài liệu nguồn để AI tạo bài.')
             return
           }
         } catch {
@@ -433,7 +427,6 @@ export default function TranslatePractice() {
         }
       }
 
-      setCreateMode('ai')
       setAiType(type)
       setAiSource(content)
       setCreateNotice(`Đã tải ${file.name} vào tài liệu nguồn.`)
@@ -441,26 +434,6 @@ export default function TranslatePractice() {
       setCreateError(err?.message || 'Không đọc được tệp.')
     }
   }, [newTitle])
-
-  // Tạo bài từ văn bản song ngữ: ghép từng dòng EN ↔ VI.
-  const handleCreate = useCallback(() => {
-    const enLines = newEn.split('\n').map((s) => s.trim()).filter(Boolean)
-    const viLines = newVi.split('\n').map((s) => s.trim()).filter(Boolean)
-    if (!newTitle.trim()) { setCreateError('Cần nhập tiêu đề bài.'); return }
-    if (enLines.length === 0 || enLines.length !== viLines.length) {
-      setCreateError('Số dòng tiếng Anh và tiếng Việt phải bằng nhau và khác 0.')
-      return
-    }
-    const newPairs = enLines.map((en, i) => ({ en, vi: viLines[i] }))
-    const created = { id: makeId(newTitle.trim()), title: newTitle.trim(), pairs: newPairs }
-    const next = [...exercises, created]
-    setExercises(next)
-    setShowCreate(false)
-    setNewTitle(''); setNewEn(''); setNewVi(''); setCreateError(''); setCreateNotice('')
-    expandVocabulary(newPairs, created.title).catch(() => {})
-    changeExercise(created.id)
-    putData('exercises', next).catch((err) => setCreateError(err.message || 'Lưu bài thất bại.'))
-  }, [newEn, newVi, newTitle, exercises, changeExercise, expandVocabulary])
 
   // Tạo bài bằng AI: gửi văn bản nguồn → backend dịch → ghép cặp { en, vi }.
   const handleAiCreate = useCallback(async () => {
@@ -599,24 +572,7 @@ export default function TranslatePractice() {
           <div className="panel hud-corners space-y-3 px-4 py-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="hud-label text-accent/80">TẠO BÀI MỚI</p>
-              <div className="flex border border-edge">
-                <button
-                  onClick={() => { setCreateMode('manual'); setCreateError(''); setCreateNotice('') }}
-                  className={`px-3 py-2 text-xs tracking-wider transition-colors ${
-                    createMode === 'manual' ? 'bg-neon/15 text-neon glow-neon' : 'text-dim hover:text-ink'
-                  }`}
-                >
-                  NHẬP SONG NGỮ
-                </button>
-                <button
-                  onClick={() => { setCreateMode('ai'); setCreateError(''); setCreateNotice('') }}
-                  className={`px-3 py-2 text-xs tracking-wider transition-colors ${
-                    createMode === 'ai' ? 'bg-accent/15 text-accent glow-accent' : 'text-dim hover:text-ink'
-                  }`}
-                >
-                  TẠO BẰNG AI
-                </button>
-              </div>
+              <span className="hud-label text-dim">TẠO TỪ TÀI LIỆU NGUỒN BẰNG AI</span>
             </div>
 
             <input
@@ -628,7 +584,7 @@ export default function TranslatePractice() {
 
             <div className="flex min-w-0 flex-wrap items-center gap-3">
               <label className="border border-neon/50 px-3 py-2 text-xs tracking-wider text-neon transition-colors hover:bg-neon/10">
-                TẢI TỆP BÀI/DỮ LIỆU
+                TẢI TỆP TÀI LIỆU
                 <input
                   type="file"
                   accept=".txt,.md,.json,text/plain,text/markdown,application/json"
@@ -640,102 +596,74 @@ export default function TranslatePractice() {
                   className="sr-only"
                 />
               </label>
-              <span className="hud-label min-w-[14rem] flex-1 text-dim">JSON MẢNG EN/VI: NẠP VÀO SONG NGỮ · TXT/MD/JSON TÀI LIỆU: ĐƯA VÀO TẠO BẰNG AI</span>
+              <span className="hud-label min-w-[14rem] flex-1 text-dim">HỖ TRỢ TXT/MD/JSON TÀI LIỆU NGUỒN · KHÔNG CÒN NHẬP BÀI SONG NGỮ THỦ CÔNG</span>
             </div>
 
-            {createMode === 'manual' ? (
-              <div className="grid gap-3 sm:grid-cols-2">
-                <textarea
-                  value={newEn}
-                  onChange={(e) => setNewEn(e.target.value)}
-                  placeholder="Dán đoạn văn tiếng Anh..."
-                  rows={6}
-                  className="min-w-0 w-full resize-y bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-neon"
-                />
-                <textarea
-                  value={newVi}
-                  onChange={(e) => setNewVi(e.target.value)}
-                  placeholder="Dán bản dịch tiếng Việt cùng thứ tự..."
-                  rows={6}
-                  className="min-w-0 w-full resize-y bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-neon"
-                />
-              </div>
-            ) : (
-              <div className="space-y-3">
-                <textarea
-                  value={aiSource}
-                  onChange={(e) => setAiSource(e.target.value)}
-                  placeholder="Dán tài liệu nguồn chưa có bản dịch. AI sẽ tách câu, dịch và tạo bài luyện..."
-                  rows={6}
+            <div className="space-y-3">
+              <textarea
+                value={aiSource}
+                onChange={(e) => setAiSource(e.target.value)}
+                placeholder="Dán tài liệu nguồn chưa có bản dịch. AI sẽ tách câu, dịch và tạo bài luyện..."
+                rows={6}
+                disabled={aiBusy}
+                className="min-w-0 w-full resize-y bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-accent disabled:opacity-50"
+              />
+              <div className="flex min-w-0 flex-wrap items-center gap-3">
+                <label className="hud-label text-dim">ĐỊNH DẠNG</label>
+                <select
+                  value={aiType}
+                  onChange={(e) => setAiType(e.target.value)}
                   disabled={aiBusy}
-                  className="min-w-0 w-full resize-y bg-surface-2 border border-edge px-3 py-2 text-sm text-ink outline-none focus:border-accent disabled:opacity-50"
-                />
-                <div className="flex min-w-0 flex-wrap items-center gap-3">
-                  <label className="hud-label text-dim">ĐỊNH DẠNG</label>
-                  <select
-                    value={aiType}
-                    onChange={(e) => setAiType(e.target.value)}
-                    disabled={aiBusy}
-                    className="min-w-[5rem] bg-surface-2 border border-edge px-2 py-2 text-xs text-ink outline-none focus:border-accent disabled:opacity-50"
-                  >
-                    <option value="txt">txt</option>
-                    <option value="md">md</option>
-                    <option value="json">json</option>
-                  </select>
+                  className="min-w-[5rem] bg-surface-2 border border-edge px-2 py-2 text-xs text-ink outline-none focus:border-accent disabled:opacity-50"
+                >
+                  <option value="txt">txt</option>
+                  <option value="md">md</option>
+                  <option value="json">json</option>
+                </select>
 
-                  <div className="flex border border-edge">
-                    {Object.entries(DIRECTIONS).map(([key, d]) => (
-                      <button
-                        key={key}
-                        onClick={() => setAiDirection(key)}
-                        disabled={aiBusy}
-                        className={`px-3 py-2 text-xs tracking-wider transition-colors disabled:opacity-50 ${
-                          aiDirection === key ? 'bg-accent/15 text-accent glow-accent' : 'text-dim hover:text-ink'
-                        }`}
-                      >
-                        {d.srcShort} → {d.dstShort}
-                      </button>
-                    ))}
-                  </div>
-
-                  <label className="hud-label sm:ml-auto text-dim">AI</label>
-                  <select
-                    value={aiProvider}
-                    onChange={(e) => setAiProvider(e.target.value)}
-                    disabled={aiBusy}
-                    className="min-w-[12rem] flex-1 bg-surface-2 border border-edge px-2 py-2 text-xs text-ink outline-none focus:border-accent disabled:opacity-50 sm:flex-none"
-                  >
-                    {providers.length === 0 && <option value="">(không có)</option>}
-                    {providers.map((p) => (
-                      <option key={p.name} value={p.name} disabled={!p.configured}>
-                        {p.name}{p.configured ? ` · ${p.model}` : ' (chưa cấu hình)'}
-                      </option>
-                    ))}
-                  </select>
+                <div className="flex border border-edge">
+                  {Object.entries(DIRECTIONS).map(([key, d]) => (
+                    <button
+                      key={key}
+                      onClick={() => setAiDirection(key)}
+                      disabled={aiBusy}
+                      className={`px-3 py-2 text-xs tracking-wider transition-colors disabled:opacity-50 ${
+                        aiDirection === key ? 'bg-accent/15 text-accent glow-accent' : 'text-dim hover:text-ink'
+                      }`}
+                    >
+                      {d.srcShort} → {d.dstShort}
+                    </button>
+                  ))}
                 </div>
+
+                <label className="hud-label sm:ml-auto text-dim">AI</label>
+                <select
+                  value={aiProvider}
+                  onChange={(e) => setAiProvider(e.target.value)}
+                  disabled={aiBusy}
+                  className="min-w-[12rem] flex-1 bg-surface-2 border border-edge px-2 py-2 text-xs text-ink outline-none focus:border-accent disabled:opacity-50 sm:flex-none"
+                >
+                  {providers.length === 0 && <option value="">(không có)</option>}
+                  {providers.map((p) => (
+                    <option key={p.name} value={p.name} disabled={!p.configured}>
+                      {p.name}{p.configured ? ` · ${p.model}` : ' (chưa cấu hình)'}
+                    </option>
+                  ))}
+                </select>
               </div>
-            )}
+            </div>
 
             {createNotice && <p className="text-xs text-neon/80">{createNotice}</p>}
             {createError && <p className="text-xs text-accent">{createError}</p>}
 
             <div className="flex flex-wrap items-center gap-3">
-              {createMode === 'manual' ? (
-                <button
-                  onClick={handleCreate}
-                  className="border border-neon/60 px-4 py-2 text-xs tracking-wider text-neon transition-colors hover:bg-neon/10"
-                >
-                  LƯU BÀI SONG NGỮ ▸
-                </button>
-              ) : (
-                <button
-                  onClick={handleAiCreate}
-                  disabled={aiBusy}
-                  className="glow-accent border border-accent/60 px-4 py-2 text-xs tracking-wider text-accent transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  {aiBusy ? 'ĐANG TẠO BÀI…' : 'DỊCH TÀI LIỆU & TẠO BÀI ▸'}
-                </button>
-              )}
+              <button
+                onClick={handleAiCreate}
+                disabled={aiBusy}
+                className="glow-accent border border-accent/60 px-4 py-2 text-xs tracking-wider text-accent transition-colors hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {aiBusy ? 'ĐANG TẠO BÀI…' : 'DỊCH TÀI LIỆU & TẠO BÀI ▸'}
+              </button>
               <button
                 onClick={() => setShowCreate(false)}
                 disabled={aiBusy}
